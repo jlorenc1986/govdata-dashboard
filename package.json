@@ -7,8 +7,8 @@
     "test": "jest",
     "dev": "nodemon",
     "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "prettier": "prettier",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier .",
     "build": "tsc"
   },
   "husky": {
