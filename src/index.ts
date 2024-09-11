@@ -1,5 +1,6 @@
 import express, {Response, Request }from 'express';
 import path from 'path'
+import { getDashboardData } from './controllers/getDashboardData';
 const app = express();
 const port = 3000;
 
@@ -11,7 +12,7 @@ app.set('views', path.join(__dirname, './views/'))
 
 app.get('/', (req: Request, res: Response) => {
 
-    res.render('index',{title: "GovData Dashoboard", message: 'soon a great list will be here'});
+    res.render('index',{title: "GovData Dashoboard", message: 'soon a great list will be here', data: getDashboardData()});
 });
 
 app.listen(port, () => {
