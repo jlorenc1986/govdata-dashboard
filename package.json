@@ -9,7 +9,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier .",
-    "tailwind:css": "postcss src/styles/tailwind.css -o public/styles/style.css",
+    "tailwind:css": "postcss src/styles/tailwind.css -w -o public/styles/styles.css",
     "build": "tsc"
   },
   "husky": {
