@@ -1,9 +1,10 @@
 html
   head
+    link(rel="stylesheet", src="/styles/styles.css")
     title= title
   body
     div.app-container
-      h1= message
+      h1.text-red-500  message
       ul
        each val, key in data
-        li= key + ': ' + val
+        li= key + ': ' + val.name + ': ' + val.count

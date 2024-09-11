@@ -1,3 +1,4 @@
 export default interface IDataResponse{
-    id: number
+    name: string,
+    count: number
 }
