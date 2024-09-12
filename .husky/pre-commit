@@ -3,3 +3,4 @@
 
 npm run test:ci
 npx lint-staged
+npm run prettier
