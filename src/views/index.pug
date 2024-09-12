@@ -11,9 +11,9 @@ html
         h2.text-xl.font-semibold.text-gray-800 Top Ministery publishing data in Germany
 
       ul.divide-y.divide-gray-200 
-        each val, key in data 
+        each [key, val] of data 
           li.flex.items-center.py-2.px6
             span.text-gray-700.text-lg.font-medium.mr-4 #{key}
             div.flex-1
-              h3.text-lg.font-medium.text-gray-800 #{val.name} 
-              p.text-gray-600.text-base #{val.count}
+              h3.text-lg.font-medium.text-gray-800 #{key} 
+              p.text-gray-600.text-base #{val}

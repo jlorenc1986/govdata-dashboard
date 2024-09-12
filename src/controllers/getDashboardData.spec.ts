@@ -2,18 +2,20 @@ import IDataResponse from "../interfaces/IDataResponse"
 import axios from "axios"
 import { getDashboardData } from "./getDashboardData";
 import * as mockResponse  from '../constants/mockApiResponse.json'
-jest.mock('axios');
-const mockedAxios = axios as jest.Mocked<typeof axios>;
 
-it('should return proper data', async () => {
+jest.mock('axios')
 
-// Provide the data object to be returned
-    mockedAxios.get.mockResolvedValue(mockResponse);
-    console.log('mock response', mockResponse.result);
-    
+describe('test suite for getDataDashboard', () => {
 
-    const got: IDataResponse[] = await getDashboardData();
+  it('should return proper data', async () => {
 
+    // mock api request
+    const mock = axios as jest.Mocked<typeof axios>
+    mock.get.mockResolvedValue({data: mockResponse })
 
-    expect(1).toEqual(got);
+    const want:Map<string, number> = new Map();
+    const got: Map<string,number> = await getDashboardData();
+     expect(got).toEqual(want)
+    })
 })
+
