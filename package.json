@@ -10,7 +10,8 @@
     "lint:fix": "eslint --fix .",
     "prettier": "prettier . --write",
     "tailwind:css": "postcss src/styles/tailwind.css -w -o public/styles/styles.css",
-    "build": "tsc"
+    "build": "tsc  -P tsconfig.build.json",
+    "start": "node --env-file=.env ./dist/index.js"
   },
   "husky": {
     "hooks": {
@@ -23,6 +24,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
     "express": "^4.20.0",
     "node-fetch": "^3.3.2",
     "postcss": "^8.4.45",

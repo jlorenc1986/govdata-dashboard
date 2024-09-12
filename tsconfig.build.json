@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.json",
+    // The real exclude patterns are project specific.
+    "exclude": ["__tests__", "/src/**/*.test.ts", "src/**/*.spec.ts"],
+    "compilerOptions": {
+      // Actually do emit when building.
+      "noEmit": false
+    }
+  }

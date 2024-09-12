@@ -1,22 +1,27 @@
 import express, { Response, Request } from "express";
 import path from "path";
+
 import { getDashboardData } from "./controllers/getDashboardData";
-import { SALUTATION, TITLE } from "./constants/string";
+import locale from "./constants/locale";
+
+
 const app = express();
-const port = 3000;
+
+const port = process.env.PORT ? process.env.PORT: 9000;
 
 /**
  * lets setup view engine with plug
  */
 app.set("view engine", "pug");
 
+
 app.use("/public", express.static(path.join(__dirname + "/public")));
 
 app.set("views", path.join(__dirname, "./views/"));
 
 app.get("/", async (req: Request, res: Response) => {
-  const dataToPass = await getDashboardData();
-  res.render("index", { title: TITLE, message: SALUTATION, data: dataToPass });
+
+  res.render("index", { locale: locale, data: await getDashboardData() });
 });
 
 app.listen(port, () => {

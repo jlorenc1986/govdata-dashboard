@@ -2,18 +2,18 @@ html
   head
     meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title= title
+    title #{locale.title}
     style 
       include ../../public/styles/styles.css
-  body.bg-sky-100
-    div.bg-slate-100.shadow-md.rouded-md.overflow-hidden.max-w-lg.mx-auto.mt-16
-      div.bg-gray-300.py-2.px-4 
-        h2.text-xl.font-semibold.text-gray-800 Top Ministery publishing data in Germany
+  body(class="bg-sky-100")
+    div(class="rounded-lg bg-slate-100 shadow-md rouded-md overflow-hidden max-w-lg mx-auto mt-16")
+      div(class="bg-gray-300 py-2 px-12") 
+        h2(class="text-xl.font-semibold.text-gray-800") #{locale.listHeader}
 
-      ul.divide-y.divide-gray-200 
+      ul(class='divide-y divide-gray-400 divide-dotted hover:divide-solid')
         each [key, val] of data 
-          li.flex.items-center.py-2.px6
-            span.text-gray-700.text-lg.font-medium.mr-4 #{key}
-            div.flex-1
-              h3.text-lg.font-medium.text-gray-800 #{key} 
-              p.text-gray-600.text-base #{val}
+          li(class="flex items-center py-2 px6 hover:bg-sky-100")
+            span(class="text-gray-700 text-lg font-medium mr-4") #{key}
+            div(class="flex-1")
+              h3(class="text-lg font-medium text-gray-800") #{locale.listedDatasetLabel} 
+              p(class="text-gray-600 text-base") #{val}
