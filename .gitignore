@@ -119,6 +119,9 @@ dist
 # TernJS port file
 .tern-port
 
+# cut out .env
+.env
+
 # Vs Code
 .vscode
 
