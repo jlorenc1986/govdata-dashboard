@@ -122,6 +122,8 @@ dist
 # cut out .env
 .env
 
+.dist/
+
 # Vs Code
 .vscode
 
