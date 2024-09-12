@@ -1,4 +1,4 @@
-export default interface IDataResponse{
-    name: string,
-    count: number
+export default interface IDataResponse {
+  name: string;
+  count: number;
 }
