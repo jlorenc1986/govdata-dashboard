@@ -9,61 +9,65 @@ A simple dashboard thats shows data sets each federal ministry has made availabl
 
 
 
-## Installation and Setup Instructions
+## Installation and Basic Instructions
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
 Installation:
 
+
 `npm install`  
 
-Run local dev server:
-
-`npm run dev`
-
-
-To Run unit tests:  
-
-`npm run test`  
-
-To Run e2e tests headless:  
-
-`npm run test:e2e`  
-
-To Run e2e tests with ui:  
-
-`npm run test:e2e:ui`  
-
-To Run Linter:  
-
-`npm run lint`  
-
-
-To Start local server:
+To Start dev server:
 
 `npm run dev `  
 
-To Visit App:
+Visit App:
 
 `localhost:3000`  
 
-To build for production
+Run unit tests:
+
+`npm run test`
+
+Run linter:
+
+`'npm run lint`
+
+Fix linted error: 
+
+`npm run lint:fix`
+
+Run Prettier: 
+
+`npm run prettier`
+
+To build for production:
 
 `npm run build`
 
+To run production version:
+
+`npm run start`
+
+
+## Instruction for contributors
+
+Please make sure to run this command:
+
+`npm run prepare`
+
+this will install all precommit hooks needed to work on this repo
+
 ## Reflection
 
-  - I want a to build on top of showdown a editor with more user friendly features
-  - The basic implementation is for desktop only 
+  - I used Express basic configuation to have a minimalistic approach
+  - I used serverside rendering also thinking about SEO
+  - Husky precommit hook will help consistency in styling and comments
   - the project makes use of the following project/tools :
-      - [parcel](https://parceljs.org/)
-      - [react](https://react.dev/)
-      - [showdown](https://showdownjs.com/)
-      - [react testing library](https://testing-library.com/)
-      - [playwright](https://https://playwright.dev/)
       - [typescript](https://www.typescriptlang.org/)
       - [eslint](https://eslint.org/)
-      - for css I started with no framework in mind, but [tailwind](https://tailwindcss.com/) is a good candidate when more features will come in. 
+      - for css [tailwind](https://tailwindcss.com/)
     
 
 
