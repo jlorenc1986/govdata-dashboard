@@ -20,7 +20,7 @@ Installation:
 
 To Start dev server:
 
-`npm run dev `  
+`npm run dev`  
 
 Visit App:
 
@@ -32,7 +32,7 @@ Run unit tests:
 
 Run linter:
 
-`'npm run lint`
+`npm run lint`
 
 Fix linted error: 
 
@@ -51,13 +51,16 @@ To run production version:
 `npm run start`
 
 
-## Instruction for contributors
+## Instructions for contributors
 
 Please make sure to run this command:
 
 `npm run prepare`
 
 this will install all precommit hooks needed to work on this repo
+
+
+
 
 ## Reflection
 
@@ -69,11 +72,6 @@ this will install all precommit hooks needed to work on this repo
       - [eslint](https://eslint.org/)
       - for css [tailwind](https://tailwindcss.com/)
     
-
-
-<!-- LICENSE -->
-## License
-
 
 ## License
 
