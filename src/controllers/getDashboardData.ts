@@ -1,24 +1,32 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { SEARCH_DATASET_API } from "../constants/urls";
 import IDataResponse from "../interfaces/IDataResponse";
-import { reduceToMap } from "../helpers/utils";
+import { buildUrls, reduceToMap } from "../helpers/utils";
+import * as d from "../constants/departaments.json";
 
 export const getDashboardData = async (): Promise<Map<string, number>> => {
-  const data: IDataResponse[] = [{ name: "", count: 0 }];
+  const datasets: IDataResponse[] = [{ name: "", count: 0 }];
 
-  const response = await axios.get(SEARCH_DATASET_API);
+  const urls = buildUrls(SEARCH_DATASET_API, d.departments);
 
-  const dataToConvert = response.data;
+  const requests = urls.map((url: string) => axios.get(url));
 
-  if (dataToConvert.result.results.length > 0) {
-    dataToConvert.result.results.forEach(
-      (element: { author: string; num_resources: number }) => {
-        data.push({ name: element.author, count: element.num_resources });
-      },
-    );
+  const [...responses]: Array<AxiosResponse> =
+    await Promise.all<AxiosResponse>(requests);
+
+  const dataToConvert = responses.flat();
+
+  if (dataToConvert.length > 0) {
+    dataToConvert.map((e) => {
+      e.data.result.results.map(
+        (i: { author: string; num_resources: number }) => {
+          datasets.push({ name: i.author, count: i.num_resources });
+        },
+      );
+    });
   }
 
-  const reducedMap = data.reduce(reduceToMap, new Map<string, number>());
+  const reducedMap = datasets.reduce(reduceToMap, new Map<string, number>());
 
   return new Map(
     [...reducedMap].sort((a, b) => {
