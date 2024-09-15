@@ -6,4 +6,4 @@ services:
       target: production
 
     ports:
-      - 4000:4000
+      - 9000:9000

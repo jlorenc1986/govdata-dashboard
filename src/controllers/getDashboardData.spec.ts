@@ -18,6 +18,6 @@ describe("test suite for getDataDashboard", () => {
     const got: Map<string, number> = await getDashboardData();
     expect(got).toBeDefined();
     expect(got).toBeInstanceOf(Map<string, number>);
-    expect(got.size).toEqual(6);
+    expect(got.size).toEqual(3);
   });
 });

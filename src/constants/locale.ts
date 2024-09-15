@@ -4,8 +4,8 @@ const locale = {
   listHeader: "Top Ministery publishing data in Germany",
   listedDatasetLabel: "total dataset : ",
   moreInfo: "open detail..",
-  ministry: "ministry",
-  datasetsCount: "published dataset till today ",
+  ministry: "Ministry",
+  datasetsCount: "Datasets",
 };
 
 export default locale;

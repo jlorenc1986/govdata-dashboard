@@ -5,7 +5,7 @@ import { buildUrls, reduceToMap } from "../helpers/utils";
 import * as d from "../constants/departaments.json";
 
 export const getDashboardData = async (): Promise<Map<string, number>> => {
-  const datasets: IDataResponse[] = [{ name: "", count: 0 }];
+  const datasets: IDataResponse[] = [];
 
   const urls = buildUrls(SEARCH_DATASET_API, d.departments);
 
@@ -20,7 +20,14 @@ export const getDashboardData = async (): Promise<Map<string, number>> => {
     dataToConvert.map((e) => {
       e.data.result.results.map(
         (i: { author: string; num_resources: number }) => {
-          datasets.push({ name: i.author, count: i.num_resources });
+          const regex = /[-’/`~!#*$@_%+=.,^&(){}[\]|;:”<>?\\]/g;
+          const idx = i.author.search(regex);
+
+          datasets.push({
+            name:
+              idx != -1 ? i.author.substring(0, idx).trim() : i.author.trim(),
+            count: i.num_resources,
+          });
         },
       );
     });
