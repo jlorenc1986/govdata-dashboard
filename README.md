@@ -5,9 +5,7 @@ A simple dashboard thats shows data sets each federal ministry has made availabl
 
 ## How it looks 
 
-![editor](https://github.com/user-attachments/assets/4514a733-42ce-43d1-9286-4942a8f30ddf)
-
-
+![Screenshot 2024-09-15 at 16 56 31](https://github.com/user-attachments/assets/0b4f8f5e-6a6f-4148-a33c-26b1168800d8)
 
 ## Installation and Basic Instructions
 
