@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watchAll  --detectOpenHandles",
     "test:ci": "jest --detectOpenHandles --forceExit",
-    "dev": "nodemon",
+    "dev": "nodemon && npm run tailwind:css",
     "lint": "eslint",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier . --write",
