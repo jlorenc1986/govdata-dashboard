@@ -11,53 +11,77 @@ A simple dashboard thats shows data sets each federal ministry has made availabl
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
+### run and work on development mode
+
 Installation:
-
-
-`npm install`  
-
-To Start dev server:
-
-`npm run dev`  
-
-Visit App:
-
-`localhost:3000`  
-
-Run unit tests:
-
-`npm run test`
-
-Run linter:
-
-`npm run lint`
-
-Fix linted error: 
-
-`npm run lint:fix`
-
-Run Prettier: 
-
-`npm run prettier`
-
-To build for production:
-
-`npm run build`
-
-To run production version:
-
-`npm run start`
-
-
-## Instructions for contributors
 
 Please make sure to run this command:
 
-`npm run prepare`
+```bash
+npm run prepare
+```
 
 this will install all precommit hooks needed to work on this repo
 
+Install dependencies:
+```bash 
+npm install
+```  
 
+To Start dev server:
+
+```bash
+npm run dev
+```  
+
+Visit App on this url:
+
+```bash 
+http://localhost:3000
+```  
+
+Run tests in watch mode:
+
+```bash 
+npm run test
+```
+
+Run linter:
+
+```bash
+npm run lint
+```
+
+Fix linted error: 
+
+```bash
+npm run lint:fix
+```
+
+Run Prettier: 
+
+```bash
+npm run prettier
+```
+
+
+### run a production version 
+To build for production:
+
+```bash
+npm run build
+```
+
+To run production version:
+
+```bash
+npm run start
+```
+
+Visit running instance on
+```bash
+http://localhost:9000
+```
 
 
 ## Reflection
