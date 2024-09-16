@@ -86,15 +86,19 @@ http://localhost:9000
 
 ## Reflection
 
-  - I used Express basic configuation to have a minimalistic approach
+  - I used [Express](https://expressjs.com/) configuation to have a minimalistic approach
   - I used serverside rendering also thinking about SEO
   - Husky precommit hook will help consistency in styling and comments
   - the project makes use of the following project/tools :
       - [typescript](https://www.typescriptlang.org/)
       - [eslint](https://eslint.org/)
-      - for css [tailwind](https://tailwindcss.com/)
-    
-
+      - [tailwind](https://tailwindcss.com/)
+      - [supertest](https://www.npmjs.com/package/supertest)
+      - [jest](https://jestjs.io/)
+      - [prettier](https://prettier.io/)
+      - [husky](https://typicode.github.io/husky)
+   
+        
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT) © [Lorenc Estrefi](https://jlorenc1986.github.io)
